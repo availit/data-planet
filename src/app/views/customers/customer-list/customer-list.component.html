@@ -1,0 +1,54 @@
+<div class="table__wrapper">
+  <table class="table is-striped is-fullwidth is-hoverable">
+    <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Customer Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th> </th>
+    </tr>
+
+    <tr *ngFor="let customer of customers">
+      <td>
+        1
+      </td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.email }}</td>
+      <td>{{ customer.phone}}</td>
+      <td>987 Ang Dr, Dallas Texas</td>
+      <td><button class="button is-info">View Details</button></td>
+    </tr>
+
+    <tr>
+      <td>
+        1
+      </td>
+      <td>Jane Doe</td>
+      <td>test@test.com</td>
+      <td>123-123-1234</td>
+      <td>987 Ang Dr, Dallas Texas</td>
+      <td><button class="button is-info">View Details</button></td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>Lorem Upsum</td>
+      <td>test@test.com</td>
+      <td>123-123-1234</td>
+      <td>987 Ang Dr, Dallas Texas</td>
+      <td><button class="button is-info">View Details</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>John Tron</td>
+      <td>test@test.com</td>
+      <td>123-123-1234</td>
+      <td>987 Ang Dr, Dallas Texas</td>
+      <td><button class="button is-info">View Details</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
