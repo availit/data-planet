@@ -1,6 +1,66 @@
-<h3 class="title is-3">All Customers</h3>
-<a routerLink="/customers/new" class="button is-success">New Customer</a>
+<section class="hero is-success is-small is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        All Customers
+      </h1>
+      <h2 class="subtitle">
+        View, Modify, or Add new records.
+      </h2>
+    </div>
+  </div>
+</section>
+<a (click)="toggleAddNew()" *ngIf="!toggleNewCustomer" class="button is-success" style="margin: 1rem 0;">New Customer {{addNewCustomer}}</a>
+
+  <div class="container" *ngIf="toggleNewCustomer">
+
+    <form class="box">
+      <div class="columns is-multiline">
+      <div class="field column">
+        <label class="label">ID*</label>
+        <div class="control">
+          <input [(ngModel)]="newId" name="id" class="input" type="number" placeholder="Customer ID" required>
+        </div>
+      </div>
+      <div class="field column">
+        <label class="label">Name*</label>
+        <div class="control">
+          <input [(ngModel)]="newName" name="name" class="input" type="text" placeholder="Customer Name" required>
+        </div>
+      </div>
+      <div class="field column">
+        <label class="label">Email*</label>
+        <div class="control">
+          <input [(ngModel)]="newEmail" name="email" class="input" type="email" placeholder="Customer Email" required>
+        </div>
+      </div>
+      <div class="field column">
+        <label class="label">Phone</label>
+        <div class="control">
+          <input [(ngModel)]="newPhone" name="phone" class="input" type="text" placeholder="Customer Phone" required>
+        </div>
+      </div>
+      <div class="field column">
+        <label class="label">Address</label>
+        <div class="control">
+          <input [(ngModel)]="newAddress" name="address" class="input" type="text" placeholder="Customer Address" required>
+        </div>
+      </div>
+
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-info" type="submit" (click)="handleNewCustomer()">Submit</button>
+        </div>
+        <div class="control">
+          <button class="button is-text" (click)="toggleAddNew()">Cancel</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
 <div class="table-container">
-  <app-customer-list></app-customer-list>
+  <app-customer-list [customers]="customers"></app-customer-list>
 </div>
 

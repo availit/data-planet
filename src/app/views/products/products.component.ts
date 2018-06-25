@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  OrderHeader: String = 'Hello, Orders!!!';
+  OrderHeader: String = 'All Products';
   allowNewServer: Boolean = false;
   serverCreationStatus: String = 'no server was created!';
   serverName: String = '';

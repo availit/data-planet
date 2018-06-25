@@ -11,43 +11,12 @@
     </tr>
 
     <tr *ngFor="let customer of customers">
-      <td>
-        1
-      </td>
+      <td>{{ customer.id }}</td>
       <td>{{ customer.name }}</td>
       <td>{{ customer.email }}</td>
       <td>{{ customer.phone}}</td>
-      <td>987 Ang Dr, Dallas Texas</td>
-      <td><button class="button is-info">View Details</button></td>
-    </tr>
-
-    <tr>
-      <td>
-        1
-      </td>
-      <td>Jane Doe</td>
-      <td>test@test.com</td>
-      <td>123-123-1234</td>
-      <td>987 Ang Dr, Dallas Texas</td>
-      <td><button class="button is-info">View Details</button></td>
-    </tr>
-    <tr>
-      <td>
-        2
-      </td>
-      <td>Lorem Upsum</td>
-      <td>test@test.com</td>
-      <td>123-123-1234</td>
-      <td>987 Ang Dr, Dallas Texas</td>
-      <td><button class="button is-info">View Details</button></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>John Tron</td>
-      <td>test@test.com</td>
-      <td>123-123-1234</td>
-      <td>987 Ang Dr, Dallas Texas</td>
-      <td><button class="button is-info">View Details</button></td>
+      <td>{{ customer.address }}</td>
+      <td><a class="button is-info" [routerLink]="'/customers/details/' + this.customer.id">View Details</a></td>
     </tr>
     </tbody>
   </table>
